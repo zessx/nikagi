@@ -1,5 +1,6 @@
 Options -Indexes +FollowSymLinks
 RewriteEngine On
+RewriteBase /
 
 # Shortcuts
 # RewriteRule ^public_key_1$  index.php?autofill&public_key=public_key_1 [L]
