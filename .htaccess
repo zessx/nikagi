@@ -1,0 +1,10 @@
+Options -Indexes +FollowSymLinks
+RewriteEngine On
+
+# Shortcuts
+# RewriteRule ^public_key_1$  index.php?autofill&public_key=public_key_1 [L]
+# RewriteRule ^public_key_2$  index.php?autofill&public_key=public_key_2&length=8 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule . index.php
