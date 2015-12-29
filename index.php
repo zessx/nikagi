@@ -13,9 +13,10 @@ define('PUBLIC_KEY',    isset($_REQUEST['public_key']) ? $_REQUEST['public_key']
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Passmaker</title>
+	<title>2Keys</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="robots" content="noindex,nofollow">
+	<link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
 	<link rel="stylesheet" href="/assets/css/app.css">
 	<script src="/assets/js/cryptojs.js"></script>
 	<script src="/assets/js/app.js"></script>
@@ -52,6 +53,7 @@ define('PUBLIC_KEY',    isset($_REQUEST['public_key']) ? $_REQUEST['public_key']
 			<label for="private_key">Private key</label>
 		</div>
 		<input type="submit" value="Generate password">
+		<img src="assets/images/logo.svg" alt="2Keys">
 	</form>
 </body>
 </html>
