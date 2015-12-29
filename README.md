@@ -36,13 +36,14 @@ You're now ready to use 2Keys!
 ## 2Keys presets
 Here are 2Keys default values for every option:
 
-| Option  | Default value |
-| - | - |
-| length | 16 |
-| lowercases | true |
-| uppercases | true |
-| digits | true |
-| symbols | true |
+
+| Option     | Default value |
+|------------|---------------|
+| length     | 16            |
+| lowercases | true          |
+| uppercases | true          |
+| digits     | true          |
+| symbols    | true          |
 
 You can overwrite these presets by passing them through GET parameters: `http://host.io/my-folder/?public_key=SERVICENAME&symbols=0&length=8`. This allows you to get a quicker access to your passwords.
 
