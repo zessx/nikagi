@@ -38,21 +38,21 @@ function generate() {
 		pass = '',
 		reserved = 0;
 
-	if(option('lowercase')) {
+	if(option('lowercases')) {
 		reserved++;
-		charsets['lowercase'] = 'tdnbeisrvmlawgfckxyhjzpuqo';
+		charsets['lowercases'] = 'tdnbeisrvmlawgfckxyhjzpuqo';
 	}
-	if(option('uppercase')) {
+	if(option('uppercases')) {
 		reserved++;
-		charsets['uppercase'] = 'FWRTIEBAVUCMGZOXDKHNJYPQSL';
+		charsets['uppercases'] = 'FWRTIEBAVUCMGZOXDKHNJYPQSL';
 	}
-	if(option('digit')) {
+	if(option('digits')) {
 		reserved++;
-		charsets['digit'] = '3876415290';
+		charsets['digits'] = '3876415290';
 	}
-	if(option('symbol')) {
+	if(option('symbols')) {
 		reserved++;
-		charsets['symbol'] = '*],=}~&|>+%/.@$_?<:[!){^;#(';
+		charsets['symbols'] = '*],=}~&|>+%/.@$_?<:[!){^;#(';
 	}
 
 	if(reserved == 0) {
@@ -65,24 +65,24 @@ function generate() {
 		pass += character;
 	}
 
-	if(option('lowercase')) {
+	if(option('lowercases')) {
 		var position = hexdec(hash[index++]).modulo(pass.length + 1);
-		character = charsets.lowercase[hexdec(hash[index++]).modulo(charsets.lowercase.length)];
+		character = charsets.lowercases[hexdec(hash[index++]).modulo(charsets.lowercases.length)];
 		pass = substr_replace(pass, character, position, 0);
 	}
-	if(option('uppercase')) {
+	if(option('uppercases')) {
 		var position = hexdec(hash[index++]).modulo(pass.length + 1);
-		character = charsets.uppercase[hexdec(hash[index++]).modulo(charsets.uppercase.length)];
+		character = charsets.uppercases[hexdec(hash[index++]).modulo(charsets.uppercases.length)];
 		pass = substr_replace(pass, character, position, 0);
 	}
-	if(option('digit')) {
+	if(option('digits')) {
 		var position = hexdec(hash[index++]).modulo(pass.length + 1);
-		character = charsets.digit[hexdec(hash[index++]).modulo(charsets.digit.length)];
+		character = charsets.digits[hexdec(hash[index++]).modulo(charsets.digits.length)];
 		pass = substr_replace(pass, character, position, 0);
 	}
-	if(option('symbol')) {
+	if(option('symbols')) {
 		var position = hexdec(hash[index++]).modulo(pass.length + 1);
-		character = charsets.symbol[hexdec(hash[index++]).modulo(charsets.symbol.length)];
+		character = charsets.symbols[hexdec(hash[index++]).modulo(charsets.symbols.length)];
 		pass = substr_replace(pass, character, position, 0);
 	}
 

@@ -1,11 +1,11 @@
 <?php
 
-define('OPT_LENGTH',    isset($_REQUEST['length'])     ? $_REQUEST['length']     : 16);
-define('OPT_LOWERCASE', isset($_REQUEST['lowercase'])  ? $_REQUEST['lowercase']  : true);
-define('OPT_UPPERCASE', isset($_REQUEST['uppercase'])  ? $_REQUEST['uppercase']  : true);
-define('OPT_DIGIT',     isset($_REQUEST['digit'])      ? $_REQUEST['digit']      : true);
-define('OPT_SYMBOL',    isset($_REQUEST['symbol'])     ? $_REQUEST['symbol']     : true);
-define('OPT_AUTOFILL',  isset($_REQUEST['autofill'])   ? true                    : false);
+define('OPT_LENGTH',     isset($_REQUEST['length'])     ? $_REQUEST['length']     : 16);
+define('OPT_LOWERCASES', isset($_REQUEST['lowercases']) ? $_REQUEST['lowercases'] : true);
+define('OPT_UPPERCASES', isset($_REQUEST['uppercase'])  ? $_REQUEST['uppercase']  : true);
+define('OPT_DIGITS',     isset($_REQUEST['digits'])     ? $_REQUEST['digits']     : true);
+define('OPT_SYMBOLS',    isset($_REQUEST['symbols'])    ? $_REQUEST['symbols']    : true);
+define('OPT_AUTOFILL',   isset($_REQUEST['autofill'])   ? true                    : false);
 
 define('PUBLIC_KEY',    isset($_REQUEST['public_key']) ? $_REQUEST['public_key'] : null);
 
@@ -28,20 +28,20 @@ define('PUBLIC_KEY',    isset($_REQUEST['public_key']) ? $_REQUEST['public_key']
 			<label for="length"> characters</label>
 		</div>
 		<div class="input-wrapper"<?php print OPT_AUTOFILL ? ' hidden' : '' ?>>
-			<input type="checkbox" name="lowercase" id="lowercase" value="1"<?php print OPT_LOWERCASE ? ' checked' : '' ?>>
-			<label for="lowercase">with lowercases</label>
+			<input type="checkbox" name="lowercases" id="lowercases" value="1"<?php print OPT_LOWERCASES ? ' checked' : '' ?>>
+			<label for="lowercases">with lowercases</label>
 		</div>
 		<div class="input-wrapper"<?php print OPT_AUTOFILL ? ' hidden' : '' ?>>
-			<input type="checkbox" name="uppercase" id="uppercase" value="1"<?php print OPT_UPPERCASE ? ' checked' : '' ?>>
-			<label for="uppercase">with uppercases</label>
+			<input type="checkbox" name="uppercases" id="uppercases" value="1"<?php print OPT_UPPERCASES ? ' checked' : '' ?>>
+			<label for="uppercases">with uppercases</label>
 		</div>
 		<div class="input-wrapper"<?php print OPT_AUTOFILL ? ' hidden' : '' ?>>
-			<input type="checkbox" name="digit" id="digit" value="1"<?php print OPT_DIGIT ? ' checked' : '' ?>>
-			<label for="digit">with digits</label>
+			<input type="checkbox" name="digits" id="digits" value="1"<?php print OPT_DIGITS ? ' checked' : '' ?>>
+			<label for="digits">with digits</label>
 		</div>
 		<div class="input-wrapper"<?php print OPT_AUTOFILL ? ' hidden' : '' ?>>
-			<input type="checkbox" name="symbol" id="symbol" value="1"<?php print OPT_SYMBOL ? ' checked' : '' ?>>
-			<label for="symbol">with symbols</label>
+			<input type="checkbox" name="symbols" id="symbols" value="1"<?php print OPT_SYMBOLS ? ' checked' : '' ?>>
+			<label for="symbols">with symbols</label>
 		</div>
 		<div class="input-wrapper"<?php print OPT_AUTOFILL ? ' hidden' : '' ?>>
 			<input type="text" name="public_key" id="public_key" autocomplete="off" autocapitalize="none" required<?php print PUBLIC_KEY ? ' value="'. PUBLIC_KEY .'"' : '' ?>>
