@@ -16,10 +16,10 @@ define('PUBLIC_KEY',    isset($_REQUEST['public_key']) ? $_REQUEST['public_key']
 	<title>2Keys</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="robots" content="noindex,nofollow">
-	<link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
-	<link rel="stylesheet" href="/assets/css/app.css">
-	<script src="/assets/js/cryptojs.js"></script>
-	<script src="/assets/js/app.js"></script>
+	<link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+	<link rel="stylesheet" href="assets/css/app.css">
+	<script src="assets/js/cryptojs.js"></script>
+	<script src="assets/js/app.js"></script>
 </head>
 <body>
 	<form method="post" accept-charset="utf-8" onsubmit="event.returnValue=false;return generate();">
