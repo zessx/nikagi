@@ -28,7 +28,15 @@ function option(key) {
 }
 
 function selectResult() {
-	document.querySelector('textarea').select();
+	if ('createRange' in document && 'getSelection' in window) {
+		var range= document.createRange();
+		range.selectNodeContents(document.body);
+		var selection= window.getSelection();
+		selection.removeAllRanges();
+		selection.addRange(range);
+	} else if ('createTextRange' in document.body) {
+		document.body.createTextRange().select();
+	}
 }
 
 function generate() {
@@ -86,7 +94,7 @@ function generate() {
 		pass = substr_replace(pass, character, position, 0);
 	}
 
-	document.body.innerHTML = '<textarea readonly>' + pass + '</textarea>';
+	document.body.innerHTML = '<p>'+ pass + '</p>';
 	document.body.onclick = selectResult;
 	document.body.onkeydown = selectResult;
 }
