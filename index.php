@@ -2,7 +2,7 @@
 
 define('OPT_LENGTH',     isset($_REQUEST['length'])     ? $_REQUEST['length']     : 16);
 define('OPT_LOWERCASES', isset($_REQUEST['lowercases']) ? (bool)$_REQUEST['lowercases'] : true);
-define('OPT_UPPERCASES', isset($_REQUEST['uppercase'])  ? (bool)$_REQUEST['uppercase']  : true);
+define('OPT_UPPERCASES', isset($_REQUEST['uppercases']) ? (bool)$_REQUEST['uppercases'] : true);
 define('OPT_DIGITS',     isset($_REQUEST['digits'])     ? (bool)$_REQUEST['digits']     : true);
 define('OPT_SYMBOLS',    isset($_REQUEST['symbols'])    ? (bool)$_REQUEST['symbols']    : true);
 define('OPT_AUTOFILL',   isset($_REQUEST['autofill'])   ? true                    : false);
