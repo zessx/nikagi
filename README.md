@@ -1,5 +1,5 @@
 # 2Keys
-![2Keys](https://raw.githubusercontent.com/zessx/2keys/gh-pages/assets/images/logo.png)  
+![2Keys](https://raw.githubusercontent.com/zessx/2keys/master/assets/images/logo.png)  
 
 ## What is 2Keys?
 > How should I manage my passwords?
