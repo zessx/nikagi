@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>2keys by zessx</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">2keys</h1>
+      <h2 class="project-tagline">Client-side password manager based on public and private keys.</h2>
+      <a href="https://github.com/zessx/2keys" class="btn">View on GitHub</a>
+      <a href="https://github.com/zessx/2keys/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/zessx/2keys/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h2>
+<a id="what-is-2keys" class="anchor" href="#what-is-2keys" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What is 2Keys?</h2>
+
+<blockquote>
+<p>How should I manage my passwords?</p>
+</blockquote>
+
+<p>2Keys is a client-side password manager which wants to answer to this everyday question.<br>
+Its purpose is to allow people to easily use a different password for each service, without having to remember them, store them, or worse: write them.</p>
+
+<h2>
+<a id="how-does-it-work" class="anchor" href="#how-does-it-work" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How does it work?</h2>
+
+<p>2Keys takes some input data:</p>
+
+<ul>
+<li>the password length</li>
+<li>charsets to use (lowercases, uppercases, digits, symbols)</li>
+<li>a public key</li>
+<li>a private key</li>
+</ul>
+
+<p>Then it uses all these data to generate a password, and here come the two main interest of 2Keys:</p>
+
+<ul>
+<li>the <strong>same input data</strong> generates the <strong>same password</strong>
+</li>
+<li>everything is generated on the fly, <strong>nothing is stored</strong>
+</li>
+</ul>
+
+<h2>
+<a id="how-should-i-use-2keys" class="anchor" href="#how-should-i-use-2keys" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How should I use 2Keys?</h2>
+
+<p>As long as you understand how 2Keys works, your password management policy is up to you!</p>
+
+<p>The most common way to use it would be to use the service name as the public key, and a unique private key. It's worth mentioning this 1Password-like policy requires your strong private key to never, ever be revealed to anyone.</p>
+
+<p>Whatever the way you're using 2Keys, just remember that <strong>your private key must never be guessable from your public key</strong>. This would make the whole process of having various passwords useless.</p>
+
+<h2>
+<a id="how-to-install-it" class="anchor" href="#how-to-install-it" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to install it?</h2>
+
+<p>Use <code>git clone</code>, or download and extract this whole repository on your own server.<br>
+If you're using an URL with a folder into (like <code>http://host.io/my-folder/</code>) to use 2Keys, you'll need to edit this <code>.htaccess</code> line accordingly:</p>
+
+<pre><code>RewriteBase /my-folder
+</code></pre>
+
+<p>You're now ready to use 2Keys!</p>
+
+<h2>
+<a id="2keys-presets" class="anchor" href="#2keys-presets" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2Keys presets</h2>
+
+<p>Here are 2Keys default values for every option:</p>
+
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>length</td>
+<td>16</td>
+</tr>
+<tr>
+<td>lowercases</td>
+<td>true</td>
+</tr>
+<tr>
+<td>uppercases</td>
+<td>true</td>
+</tr>
+<tr>
+<td>digits</td>
+<td>true</td>
+</tr>
+<tr>
+<td>symbols</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+
+<p>You can overwrite these presets by passing them through GET parameters: <code>http://host.io/my-folder/?public_key=SERVICENAME&amp;symbols=0&amp;length=8</code>. This allows you to get a quicker access to your passwords.</p>
+
+<p>Now let's take an example. We want to associate the <code>github</code> public key to our GitHub password, and as we want it to be secure, we decides to generate a 24-length password. It would be annoying to always have to remember that we chose a 24-length password, but let's have a look on the <code>.htaccess</code> file:</p>
+
+<pre><code># Shortcuts
+# RewriteRule ^public_key_1$  index.php?autofill&amp;public_key=public_key_1 [L]
+# RewriteRule ^public_key_2$  index.php?autofill&amp;public_key=public_key_2&amp;length=8&amp;symbols=0 [L]
+</code></pre>
+
+<p>These (commented) rules allow us to quickly set any shortcut, here's the one we would set for our GitHub password:</p>
+
+<pre><code>RewriteRule ^github$  index.php?autofill&amp;public_key=github&amp;length=24 [L]
+</code></pre>
+
+<p>This rule offers us a new shortcut: <code>http://host.io/my-folder/github</code>, which already has our settings defined! Plus, the <code>autofill</code> option will hide the whole form, leaving the only one missing data: our private key.</p>
+
+<h2>
+<a id="legals" class="anchor" href="#legals" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Legals</h2>
+
+<blockquote>
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.</p>
+</blockquote>
+
+<ul>
+<li>Author : <a href="https://github.com/zessx">zessx</a>
+</li>
+<li>Licence : <a href="http://opensource.org/licenses/MIT">MIT</a>
+</li>
+<li>Contact : <a href="https://twitter.com/zessx">@zessx</a>
+</li>
+<li>Link  : <a href="http://smarchal.com/passmaker">http://smarchal.com/passmaker</a>
+</li>
+</ul>
+
+<h2>
+<a id="donations" class="anchor" href="#donations" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Donations</h2>
+
+<p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=KTYWBM9HJMMSE&amp;lc=FR&amp;item_name=Buy%20a%20coffee%20to%20zessx%20%28Samuel%20Marchal%29&amp;currency_code=EUR&amp;bn=PP%2dDonationsBF%3abmac%3aNonHosted"><img src="http://doc.smarchal.com/bmac" alt="Buy me a coffee !"></a> <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=KTYWBM9HJMMSE&amp;lc=FR&amp;item_name=Buy%20a%20tea%20to%20zessx%20%28Samuel%20Marchal%29&amp;currency_code=EUR&amp;bn=PP%2dDonationsBF%3abmac%3aNonHosted"><img src="http://doc.smarchal.com/bmat" alt="Buy me a tea !"></a></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/zessx/2keys">2keys</a> is maintained by <a href="https://github.com/zessx">zessx</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
