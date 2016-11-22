@@ -47,7 +47,7 @@ body {
 img {
   display: block;
   width: 5em;
-  margin: auto;
+  margin: 1em auto;
 }
 
 input {
