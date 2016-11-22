@@ -65,7 +65,7 @@ This rule offers us a new shortcut: `http://host.io/my-folder/github`, which alr
 - Author : [zessx](https://github.com/zessx)
 - Licence : [MIT](http://opensource.org/licenses/MIT)
 - Contact : [@zessx](https://twitter.com/zessx)
-- Link  : [http://smarchal.com/passmaker](http://smarchal.com/passmaker)
+- Link  : [http://smarchal.com/2keys/](http://smarchal.com/2keys/)
 
 ## Donations
 [![Buy me a coffee !](http://doc.smarchal.com/bmac)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=KTYWBM9HJMMSE&lc=FR&item_name=Buy%20a%20coffee%20to%20zessx%20%28Samuel%20Marchal%29&currency_code=EUR&bn=PP%2dDonationsBF%3abmac%3aNonHosted) [![Buy me a tea !](http://doc.smarchal.com/bmat)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=KTYWBM9HJMMSE&lc=FR&item_name=Buy%20a%20tea%20to%20zessx%20%28Samuel%20Marchal%29&currency_code=EUR&bn=PP%2dDonationsBF%3abmac%3aNonHosted)
