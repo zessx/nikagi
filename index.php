@@ -1,7 +1,7 @@
 <?php
 
 define('ROOT_PATH', dirname(__FILE__));
-define('ROOT_URL',  dirname($_SERVER['PHP_SELF']));
+define('ROOT_URL',  trim(dirname($_SERVER['PHP_SELF']), '\\'));
 
 ini_set('session.gc_maxlifetime', 3600);
 session_set_cookie_params(3600);
