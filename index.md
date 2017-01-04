@@ -39,22 +39,6 @@ This url will load your settings, leaving you with a single field to fill: your 
 You've defined the default values at the installation, but you may want to change them at a time.  
 Simply clear the `config/config.ini` file and the installation process will be launched again.
 
-## Changelog
-# [v0.2.1](https://github.com/zessx/2keys/releases/tag/v0.2.1)
-- (+) Order presets
-- (~) Fix issue when 2keys is not is a subfolder
-
-# [v0.2](https://github.com/zessx/2keys/releases/tag/v0.2)
-- (+) An administration interface has been added
-- (+) 2Keys has now an installation process
-- (-) Htaccess use has been dropped
-- (~) A different font is now used to differenciate 1, i, I, l, L, etc.
-- (~) Logo has been changed
-- (~) Design has been slightly modified
-
-# [v0.1](https://github.com/zessx/2keys/releases/tag/v0.1)
-- (+) Initial release
-
 ## Legals
 > THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.
 
