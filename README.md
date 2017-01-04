@@ -44,6 +44,7 @@ Simply clear the `config/config.ini` file and the installation process will be l
 
 ## Changelog
 # [v0.2.1](https://github.com/zessx/2keys/releases/tag/v0.2.1)
+- (+) Order presets
 - (~) Fix issue when 2keys is not is a subfolder
 
 # [v0.2](https://github.com/zessx/2keys/releases/tag/v0.2)

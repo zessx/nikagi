@@ -15,6 +15,7 @@ if (isset($_POST['length']) && isset($_POST['public_key'])) {
         'digits'     => isset($_POST['digits']) ? "1" : "0",
         'symbols'    => isset($_POST['symbols']) ? "1" : "0"
     );
+    ksort($presets);
     writeINI($presets, $presetsFile, true);
 
     header('location:'. ROOT_URL .'/?admin');
