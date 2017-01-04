@@ -9,9 +9,8 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
-  overflow: hidden;
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
@@ -22,6 +21,7 @@ body {
           justify-content: center;
   background-color: #1A2530;
   color: #fff;
+  padding: 5em 0;
 }
 *,
 *::before {
@@ -44,12 +44,20 @@ body {
   position: relative;
   margin: 0.5em 0;
 }
-img {
+.logo {
   display: block;
-  width: 5em;
+  width: 6em;
   margin: 1em auto;
 }
 
+fieldset {
+  margin: 1em 0 0;
+  padding: 0 1em 0.5em;
+  border: 1px solid #5A1710;
+}
+legend {
+  color: #5A1710;
+}
 input {
   color: inherit;
   font: inherit;
@@ -154,4 +162,88 @@ textarea {
   color: white;
   cursor: default;
   resize: none;
+}
+
+/* Administration */
+body.admin {
+  background-color: #9A392F;
+}
+body.admin input[type="checkbox"] + label::before {
+  box-shadow: 0 0 0 2px #9A392F, 0 0 0 3px #fff;
+}
+body.admin input[type="text"],
+body.admin input[type="password"] {
+  box-shadow: 0 2px #9A392F, 0 3px #fff;
+}
+body.admin input[type="text"] + label,
+body.admin input[type="password"] + label {
+  color: #5A1710;
+}
+body.admin input[type="submit"] {
+  box-shadow: 0 0 0 2px #9A392F, 0 0 0 3px #fff;
+}
+body.admin input[type="submit"]:hover,
+body.admin input[type="submit"]:focus {
+  color: #5A1710;
+  box-shadow: 0 0 0 2px #9A392F, 0 0 0 3px #5A1710;
+}
+.actions {
+  position: fixed;
+  bottom: 1em;
+  left: 1em;
+}
+.actions a {
+  height: 2em;
+  width: 2em;
+  float: left;
+  padding: 0.2em;
+  opacity: 0.3;
+  transition: opacity 0.2s;
+}
+.actions a:hover {
+  opacity: 1;
+}
+table {
+  width: 100%;
+  max-width: 700px;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+tbody tr:nth-child(odd) {
+  background: rgba(255, 255, 255, .1);
+}
+th,
+td {
+  text-align: center;
+  padding: 0.3em 0.5em;
+}
+thead th {
+  font-weight: normal;
+  opacity: 0.3;
+}
+th:first-child {
+  width: 30%;
+}
+th:last-child {
+  width: 2.2em;
+}
+span.disabled {
+  opacity: 0.3;
+}
+.link-delete,
+.link-add {
+  display: block;
+  height: 1.4em;
+  width: 1.4em;
+  border: none;
+  background: none;
+  padding: 0;
+  font-size: inherit;
+  cursor: pointer;
+  opacity: 0.3;
+  transition: opacity 0.2s;
+}
+.link-delete:hover,
+.link-add:hover {
+  opacity: 1;
 }

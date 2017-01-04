@@ -27,37 +27,32 @@ Whatever the way you're using 2Keys, just remember that **your private key must 
 
 ## How to install it?
 Use `git clone`, or download and extract this whole repository on your own server.  
-If you're using an URL with a folder into (like `http://host.io/my-folder/`) to use 2Keys, you'll need to edit this `.htaccess` line accordingly:
-
-	RewriteBase /my-folder
+Access to your brand new password manager, and the installation process will launch itself. It will ask you to create an admin account (used to manage [presets](#presets)), and to define the default values used by 2Keys.
 
 You're now ready to use 2Keys!
 
-## 2Keys presets
-Here are 2Keys default values for every option:
+## Presets
+Some online services require password with a limited length, or without any symbols. 2Keys allows you to take these limitations in account, without having to remember it, using presets.  
+To create a new preset, access to your administration page through the bottom left buttons. 
 
+Each preset offers you a shortcut. For example, if you've set a preset for the public key `github`, you'll be able to use the following url: `http://host.io/2keys/github`.  
+This url will load your settings, leaving you with a single field to fill: your private key.
 
-| Option     | Default value |
-|------------|---------------|
-| length     | 16            |
-| lowercases | true          |
-| uppercases | true          |
-| digits     | true          |
-| symbols    | true          |
+## How to change the default values?
+You've defined the default values at the installation, but you may want to change them at a time.  
+Simply clear the `config/config.ini` file and the installation process will be launched again.
 
-You can overwrite these presets by passing them through GET parameters: `http://host.io/my-folder/?public_key=SERVICENAME&symbols=0&length=8`. This allows you to get a quicker access to your passwords.
+## Changelog
+# [v0.2](https://github.com/zessx/2keys/releases/tag/v0.2)
+- (+) An administration interface has been added
+- (+) 2Keys has now an installation process
+- (-) Htaccess use has been dropped
+- (~) A different font is now used to differenciate 1, i, I, l, L, etc.
+- (~) Logo has been changed
+- (~) Design has been slightly modified
 
-Now let's take an example. We want to associate the `github` public key to our GitHub password, and as we want it to be secure, we decides to generate a 24-length password. It would be annoying to always have to remember that we chose a 24-length password, but let's have a look on the `.htaccess` file:
-
-	# Shortcuts
-	# RewriteRule ^public_key_1$  index.php?autofill&public_key=public_key_1 [L]
-	# RewriteRule ^public_key_2$  index.php?autofill&public_key=public_key_2&length=8&symbols=0 [L]
-
-These (commented) rules allow us to quickly set any shortcut, here's the one we would set for our GitHub password:
-
-	RewriteRule ^github$  index.php?autofill&public_key=github&length=24 [L]
-
-This rule offers us a new shortcut: `http://host.io/my-folder/github`, which already has our settings defined! Plus, the `autofill` option will hide the whole form, leaving the only one missing data: our private key.
+# [v0.1](https://github.com/zessx/2keys/releases/tag/v0.1)
+- (+) Initial release
 
 ## Legals
 > THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.

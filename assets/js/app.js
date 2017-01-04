@@ -28,14 +28,15 @@ function option(key) {
 }
 
 function selectResult() {
+	var wrapper = document.querySelector('#wrapper');
 	if ('createRange' in document && 'getSelection' in window) {
 		var range= document.createRange();
-		range.selectNodeContents(document.body);
+		range.selectNodeContents(wrapper);
 		var selection= window.getSelection();
 		selection.removeAllRanges();
 		selection.addRange(range);
-	} else if ('createTextRange' in document.body) {
-		document.body.createTextRange().select();
+	} else if ('createTextRange' in wrapper) {
+		wrapper.createTextRange().select();
 	}
 }
 
@@ -94,7 +95,9 @@ function generate() {
 		pass = substr_replace(pass, character, position, 0);
 	}
 
-	document.body.innerHTML = '<p>'+ pass + '</p>';
+	document.querySelector('#wrapper').innerHTML = '<p>'+ pass + '</p>';
+	document.querySelector('#wrapper').style.fontFamily = 'Verdana, sans-serif';
+	document.querySelector('.link-back').removeAttribute('hidden');
 	document.body.onclick = selectResult;
 	document.body.onkeydown = selectResult;
 }
