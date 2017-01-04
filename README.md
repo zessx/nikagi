@@ -43,6 +43,9 @@ You've defined the default values at the installation, but you may want to chang
 Simply clear the `config/config.ini` file and the installation process will be launched again.
 
 ## Changelog
+# [v0.2.1](https://github.com/zessx/2keys/releases/tag/v0.2.1)
+- (~) Fix issue when 2keys is not is a subfolder
+
 # [v0.2](https://github.com/zessx/2keys/releases/tag/v0.2)
 - (+) An administration interface has been added
 - (+) 2Keys has now an installation process
