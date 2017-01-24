@@ -22,7 +22,7 @@ if (isset($_POST['length']) && isset($_POST['public_key'])) {
     die;
 }
 
-$page_title = '2Keys - Administration';
+$page_title = 'Nikagi - Administration';
 $page_class = 'admin';
 $page_button_back = true;
 include ROOT_PATH .'/pages/partials/header.php';
@@ -56,7 +56,7 @@ include ROOT_PATH .'/pages/partials/header.php';
         <label for="public_key">Public key</label>
     </div>
     <input type="submit" value="Create preset">
-    <img src="<?php print ROOT_URL ?>/assets/images/logo.svg" alt="2Keys" class="logo">
+    <img src="<?php print ROOT_URL ?>/assets/images/logo.svg" alt="Nikagi" class="logo">
 </form>
 
 <?php

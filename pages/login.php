@@ -11,7 +11,7 @@ if (isset($_POST['username']) && ADMIN_USERNAME == $_POST['username']) {
     }
 }
 
-$page_title = '2keys - Administration';
+$page_title = 'Nikagi - Administration';
 $page_class = 'admin';
 $page_button_back  = true;
 $page_button_admin = false;
@@ -29,7 +29,7 @@ include ROOT_PATH .'/pages/partials/header.php';
         <label for="password">Password</label>
     </div>
     <input type="submit" value="Login">
-    <img src="<?php print ROOT_URL ?>/assets/images/logo.svg" alt="2Keys" class="logo">
+    <img src="<?php print ROOT_URL ?>/assets/images/logo.svg" alt="Nikagi" class="logo">
 </form>
 
 <?php

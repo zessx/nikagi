@@ -5,7 +5,7 @@ if (!isset($_SESSION['logged'])) {
     die;
 }
 
-$page_title = '2Keys - Administration';
+$page_title = 'Nikagi - Administration';
 $page_class = 'admin';
 $page_button_back = true;
 $page_button_admin = false;
@@ -53,7 +53,7 @@ include ROOT_PATH .'/pages/partials/header.php';
             <th><a href="<?php print ROOT_URL ?>/?add" class="link-add" title="Add"><img src="assets/images/add.svg" alt="Add"></a></th>
         </tr>
         <tr>
-            <th colspan="7"><img src="<?php print ROOT_URL ?>/assets/images/logo.svg" alt="2Keys" class="logo"></th>
+            <th colspan="7"><img src="<?php print ROOT_URL ?>/assets/images/logo.svg" alt="Nikagi" class="logo"></th>
         </tr>
     </tfoot>
 </table>

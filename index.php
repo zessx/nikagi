@@ -1,5 +1,7 @@
 <?php
 
+// To generate favicon pack: http://realfavicongenerator.net/
+
 define('ROOT_PATH', dirname(__FILE__));
 define('ROOT_URL',  rtrim(dirname($_SERVER['PHP_SELF']), '\\\/'));
 
@@ -7,7 +9,7 @@ ini_set('session.gc_maxlifetime', 3600);
 session_set_cookie_params(3600);
 session_start();
 
-$page_title = '2Keys';
+$page_title = 'Nikagi';
 $page_class = '';
 $page_button_back  = false;
 $page_button_admin = true;
@@ -23,7 +25,7 @@ if (   !isset($config['username'])   || empty($config['username'])
     || !isset($config['symbols'])    || !in_array($config['symbols'], array("0", "1"))
 ) {
 
-    // Launch 2Keys installation
+    // Launch Nikagi installation
     include ROOT_PATH . '/pages/install.php';
 
 } else {

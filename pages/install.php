@@ -24,7 +24,7 @@ define('OPT_UPPERCASES', isset($config['uppercases']) ? (bool)$config['uppercase
 define('OPT_DIGITS',     isset($config['digits'])     ? (bool)$config['digits']     : true);
 define('OPT_SYMBOLS',    isset($config['symbols'])    ? (bool)$config['symbols']    : true);
 
-$page_title = '2Keys - Installation';
+$page_title = 'Nikagi - Installation';
 $page_class = 'admin';
 $page_button_help  = true;
 include ROOT_PATH .'/pages/partials/header.php';
@@ -71,7 +71,7 @@ include ROOT_PATH .'/pages/partials/header.php';
     </fieldset>
 
     <input type="submit" value="Finish installation">
-    <img src="<?php print ROOT_URL ?>/assets/images/logo.svg" alt="2Keys" class="logo">
+    <img src="<?php print ROOT_URL ?>/assets/images/logo.svg" alt="Nikagi" class="logo">
 </form>
 
 <?php

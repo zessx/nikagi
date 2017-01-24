@@ -26,7 +26,7 @@ if (isset($_REQUEST['preset']) && isset($presets[$_REQUEST['preset']])) {
 
 }
 
-$page_title = '2Keys';
+$page_title = 'Nikagi';
 $page_class = '';
 $page_button_back  = OPT_AUTOFILL;
 $page_button_admin = true;
@@ -67,7 +67,7 @@ include ROOT_PATH .'/pages/partials/header.php';
             <label for="private_key">Private key</label>
         </div>
         <input type="submit" value="Generate password">
-        <img src="<?php print ROOT_URL ?>/assets/images/logo.svg" alt="2Keys" class="logo">
+        <img src="<?php print ROOT_URL ?>/assets/images/logo.svg" alt="Nikagi" class="logo">
     </form>
 </div>
 
