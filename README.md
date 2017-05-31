@@ -43,6 +43,10 @@ You've defined the default values at the installation, but you may want to chang
 Simply clear the `config/config.ini` file and the installation process will be launched again.
 
 ## Changelog
+# [v0.2.3](https://github.com/zessx/nikagi/releases/tag/v0.2.3)
+- (+) Add entry point for mobile users
+- (+) Add robots.txt
+
 # [v0.2.2](https://github.com/zessx/nikagi/releases/tag/v0.2.2)
 - (~) Project renamed from 2keys to Nikagi (trademark request)
 - (~) Logo changed to fit new name
