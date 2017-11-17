@@ -141,6 +141,7 @@ input[type="submit"] {
   width: calc(100% - 6px);
   background: none;
   border: none;
+  border-radius: 0;
   margin: 1em 3px;
   padding: 0.3em;
   box-shadow: 0 0 0 2px #1A2530, 0 0 0 3px #fff;
