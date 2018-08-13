@@ -5,7 +5,7 @@
     <a href="<?php print ROOT_URL ?>/?admin" <?php print $page_button_admin ? '' : 'hidden' ?> class="link-admin" title="Administration">
         <img src="<?php print ROOT_URL ?>/assets/images/cog.svg" alt="Administration">
     </a>
-    <a href="http://smarchal.com/nikagi/" <?php print $page_button_help ? '' : 'hidden' ?> class="link-help" title="Help" target="_help">
+    <a href="https://github.com/zessx/nikagi" <?php print $page_button_help ? '' : 'hidden' ?> class="link-help" title="Help" target="_help">
         <img src="<?php print ROOT_URL ?>/assets/images/help.svg" alt="Administration">
     </a>
 </div>
