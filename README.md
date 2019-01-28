@@ -69,10 +69,7 @@ Simply clear the `config/config.ini` file and the installation process will be l
 ## Legals
 > THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.
 
-- Author : [zessx](https://github.com/zessx)
-- Licence : [MIT](http://opensource.org/licenses/MIT)
 - Contact : [@zessx](https://twitter.com/zessx)
-- Link  : [http://smarchal.com/nikagi/](http://smarchal.com/nikagi/)
 
 ## Donations
 [![Buy me a coffee !](http://doc.smarchal.com/bmac)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=KTYWBM9HJMMSE&lc=FR&item_name=Buy%20a%20coffee%20to%20zessx%20%28Samuel%20Marchal%29&currency_code=EUR&bn=PP%2dDonationsBF%3abmac%3aNonHosted) [![Buy me a tea !](http://doc.smarchal.com/bmat)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=KTYWBM9HJMMSE&lc=FR&item_name=Buy%20a%20tea%20to%20zessx%20%28Samuel%20Marchal%29&currency_code=EUR&bn=PP%2dDonationsBF%3abmac%3aNonHosted)
