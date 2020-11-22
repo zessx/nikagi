@@ -42,7 +42,13 @@ This url will load your settings, leaving you with a single field to fill: your 
 You've defined the default values at the installation, but you may want to change them at a time.  
 Simply clear the `config/config.ini` file and the installation process will be launched again.
 
+## Security
+The `config/` directory does not contain anything critical, but it's still not a good idea to leave it public. You should protect this folder, with an `.htaccess` containing `Deny from all` for example if you're using Apache2.
+
 ## Changelog
+# [v0.2.4](https://github.com/zessx/nikagi/releases/tag/v0.2.4)
+- (~) Remove config folder for better deploys
+
 # [v0.2.3](https://github.com/zessx/nikagi/releases/tag/v0.2.3)
 - (+) Add entry point for mobile users
 - (+) Add robots.txt
